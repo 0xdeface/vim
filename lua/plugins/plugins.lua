@@ -8,10 +8,11 @@ local plugins = {
         dependencies = 'nvim-tree/nvim-web-devicons',
         config = true
     },
+    require 'plugins.toggleterm',
     require 'plugins.lualine',
     require "plugins.nvim_tree",
     require "plugins.nvim_treesit",
-    {"fatih/vim-go", build=function() vim.cmd("GoInstallBinaries") end},
+    require "plugins.vim_go",
     {'nvim-telescope/telescope.nvim',dependencies = {'nvim-lua/plenary.nvim'}},
     -- notification
     -- example require("notify")("My super important message")

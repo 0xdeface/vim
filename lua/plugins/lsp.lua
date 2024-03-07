@@ -20,3 +20,4 @@ cfg.gopls.setup({
     },
   },
 })
+cfg.rust_analyzer.setup{}

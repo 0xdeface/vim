@@ -37,6 +37,11 @@ keymap.set("n", "<leader>bo", ":new<CR>") -- open new tab
 keymap.set("n", "<leader>bd", ":bdelete<CR>") -- close current tab
 keymap.set("n", "<leader>bn", ":bn<CR>") --  go to next tab
 keymap.set("n", "<leader>bp", ":bp<CR>") --  go to previous tab
+-- terminal
+keymap.set("n","<leader>t", ":term<CR>")
+keymap.set("t","<leader>t <c-w>", ":term<CR>")
+keymap.set("n","<leader>T", ":tab term<CR>")
+keymap.set("t","<leader>T <c-w>", ":tab term<CR>")
 -- copy default reg to/from system/mouse clipboard
 keymap.set({"n", "v", "x"}, '<Leader>y', ':let @+=@"<CR>')
 keymap.set({"n", "v", "x"}, '<Leader>p', ':let @"=@+<CR>')

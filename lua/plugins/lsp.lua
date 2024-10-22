@@ -1,4 +1,5 @@
 -- Setup language servers.
+--
 local cfg = require('lspconfig')
 cfg.lua_ls.setup{
     settings = {

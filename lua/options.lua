@@ -33,9 +33,9 @@ vim.o.encoding='utf-8'
 vim.o.fileencoding='utf-8'
 opt.syntax='on'
 vim.o.filetype='off'
-vim.o.mapleader=','
+vim.g.mapleader=','
 vim.o.shortmess='filnxtToOFc'
-vim.o.noswapfile=true
+vim.g.noswapfile=true
 vim.g.mapleader=","
 opt.termguicolors = true
 opt.wildignore:append({"/tmp/*","*.so","*.swp","*.zip","*.pyc","*.db","*.sqlite","*node_modules/", "*go/pkg/mod/"})

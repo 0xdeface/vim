@@ -38,10 +38,10 @@ keymap.set("n", "<leader>bd", ":bdelete<CR>") -- close current tab
 keymap.set("n", "<leader>bn", ":bn<CR>") --  go to next tab
 keymap.set("n", "<leader>bp", ":bp<CR>") --  go to previous tab
 -- terminal
-keymap.set("n","<leader>t", ":term<CR>")
-keymap.set("t","<leader>t <c-w>", ":term<CR>")
-keymap.set("n","<leader>T", ":tab term<CR>")
-keymap.set("t","<leader>T <c-w>", ":tab term<CR>")
+keymap.set("n","<leader>t", ":ToggleTerm<CR>")
+keymap.set("t","<leader>t <c-w>", ":ToggleTerm<CR>")
+keymap.set("t","<ESC>", "<C-\\><C-n>")
+
 -- copy default reg to/from system/mouse clipboard
 keymap.set({"n", "v", "x"}, '<Leader>y', ':let @+=@"<CR>')
 keymap.set({"n", "v", "x"}, '<Leader>p', ':let @"=@+<CR>')
@@ -90,5 +90,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- nvim left tree
 vim.keymap.set('n','<F2>',':NvimTreeToggle<CR>',{silent=true})
 -- auto brackets
-vim.api.nvim_set_keymap('i', '{', '{<CR>}<Esc>ko', { noremap = true })
+-- vim.api.nvim_set_keymap('i', '{', '{<CR>}<Esc>ko', { noremap = true })
+if vim.api.nvim_win_get_option(0, "diff") then
+    vim.keymap.set({"n","v","x"},'<Leader>r',':diffget RE<CR>]c')
+    vim.keymap.set({"n","v","x"},'<Leader>l',':diffget LO<CR>]c')
+end
 

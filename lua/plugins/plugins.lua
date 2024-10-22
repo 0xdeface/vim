@@ -1,6 +1,11 @@
 local plugins = {
 --     {'nvim-lua/popup.nvim'},
     {"kyazdani42/nvim-web-devicons", lazy=true},
+-- lazy.nvim
+    {
+     "folke/noice.nvim", event = "VeryLazy",  opts = {},
+       dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", }
+     },
     -- show tags
     "preservim/tagbar",
     {'akinsho/bufferline.nvim',

@@ -14,6 +14,7 @@ vim.api.nvim_create_autocmd("QuitPre", {
     end
   end
 })
+
 return {'nvim-tree/nvim-tree.lua',
     dependencies = {"kyazdani42/nvim-web-devicons"}, 
     config=function()
